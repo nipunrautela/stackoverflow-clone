@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "./HomeMainbar.css";
 import QuestionsList from "./QuestionsList";
@@ -69,6 +69,17 @@ const HomeMainbar = () => {
   ];
 
   const location = useLocation();
+  const user = 1;
+  const navigate = useNavigate();
+
+  const checkAuth = () => {
+    if (user === null) {
+      alert("Login/Signup to ask questions");
+      navigate("/Auth");
+    } else {
+      navigate("/AskQuestion");
+    }
+  };
 
   return (
     <div className="main-bar">
@@ -78,9 +89,9 @@ const HomeMainbar = () => {
         ) : (
           <h1>All Questions</h1>
         )}
-        <Link to="/AskQuestion" className="ask-btn">
+        <button onClick={checkAuth} className="ask-btn">
           Ask Question
-        </Link>
+        </button>
       </div>
       <div>
         {questionsList === null ? (
