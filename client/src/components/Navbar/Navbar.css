@@ -1,4 +1,4 @@
-.main-nav {
+.main-nav{
     min-height: 50px;
     width: 100%;
     margin: 0% auto;
@@ -14,44 +14,44 @@
     align-items: center;
 }
 
-.navbar {
+.navbar{
     height: 100%;
-    min-width: 50%;
+    min-width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav-logo {
+.nav-logo{
     padding: 5px 25px;
 }
 
-.nav-item {
+.nav-item{
     margin: 0px 3px;
     font-size: small;
     font-weight: 500;
     text-decoration: none;
-    color:rgb(69, 69, 69);
+    color: rgb(69, 69, 69);
     transition: 0.2s;
 }
 
-.nav-btn {
+.nav-btn{
     cursor: pointer;
     border-radius: 20px;
     padding: 10px 20px;
 }
 
-.nav-item:hover {
+.nav-item:hover{
     background-color: rgb(226, 226, 226);
 }
 
-.navbar form {
+.navbar form{
     flex-grow: 1;
     padding: 0px 12px;
     position: relative;
 }
 
-.navbar form input {
+.navbar form input{
     min-width: 90%;
     margin: 0;
     padding: 8px 10px 8px 32px;
@@ -66,7 +66,7 @@
     top: 8px;
 }
 
-.nav-link {
+.nav-links{
     padding: 7px 13px;
     border: solid 1px blue;
     border-radius: 3px;
@@ -74,6 +74,6 @@
     cursor: pointer;
 }
 
-.nav-link:hover {
+.nav-links:hover{
     background-color: #d3e4eb;
 }

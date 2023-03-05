@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 
 import userRoutes from "./routes/users.js";
+import questionRoutes from "./routes/Questions.js";
 
 const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
@@ -14,11 +15,11 @@ app.get("/", (req, res) => {
 });
 
 app.use("/user", userRoutes);
+app.use("/Questions", questionRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-const CONNECTION_URL =
-  "mongodb+srv://admin:admin@stack-overflow-clone.1geriay.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&authSource=admin";
+const CONNECTION_URL = "";
 
 mongoose.set("strictQuery", false);
 mongoose
